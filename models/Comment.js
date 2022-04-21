@@ -10,12 +10,12 @@ const ReplySchema = new Schema(
         },
         replyBody: {
             type: String,
-            required: 'You must add a reply!',
+            required: [true, 'You must add a reply!'],
             trim: true
         },
         writtenBy: {
             type: String,
-            required: 'You must add a name!',
+            required: [true, 'You must add a name!'],
             trim: true
         },
         createdAt: {
@@ -35,12 +35,12 @@ const CommentSchema = new Schema(
     {
         writtenBy: {
             type: String,
-            required: 'You must add a name!',
+            required: [true, 'You must add a name!'],
             trim: true
         },
         commentBody: {
             type: String,
-            required: 'You must add a comment!',
+            required: [true, 'You must add a comment!'],
             trim: true
         },
         createdAt: {

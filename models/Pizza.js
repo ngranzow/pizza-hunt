@@ -5,12 +5,12 @@ const PizzaSchema = new Schema(
     {
         pizzaName: {
             type: String,
-            required: 'You need to provide a pizza name!',
+            required: [true, 'You need to provide a pizza name!'],
             trim: true
         },
         createdBy: {
             type: String,
-            required: 'You need to provide a name!',
+            required: [true, 'You need to provide a name!'],
             trim: true
         },
         createdAt: {
